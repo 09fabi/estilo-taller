@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear trabajador</title>
+    <script src="../trabajador.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/estilos forms/forms.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <!--Barra de Navegación-->
+   <div class="container2">
+    <div class="navbar">
+        <a class="logo" href="#"><img width="70px" src="/img/crm_24x24.png" alt="Logo"></a>
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            </div>
+        <div class="nav-items">
+            <a style="text-decoration: none;" href="/datos-laborales/listar-datos-laborales.html" class="ui-btn">
+                <span>
+                  Lista de Datos laborales
+                </span>
+            </a>
+            <div class="dropdown">
+                <button class="ui-btn">
+                    <span>
+                      Listas 
+                    </span>
+                  </button>
+                <div style="background-color: #011522;" class="dropdown-menu">
+                    <a style="font-family: monospace;" class="dropdown-item" href="/trabajador/listar-trabajadores.html">Trabajadores</a>
+                    <a style="font-family: monospace;" class="dropdown-item" href="/contacto-emergencia/listar-contacto-emergencia.html">Contacto Emergencia</a>
+                    <a style="font-family: monospace;" class="dropdown-item" href="/carga-familiar/listar-carga-familiar.html">Carga Familiar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div>
+        <h1 class="text-white">Agregar datos laborales</h1>
+        <hr>
+        <!--Formulario para agregar datos laborales-->
+        <div>
+            <form class="container">
+
+                <!--Cargo trabajador-->
+                <div style="margin-top: 20px;">
+                    <label for="lista-cargo-trabajo">Cargo del trabajador</label>
+                    <select id="lista-cargo-trabajo" class="form-select" aria-label="">
+                        <option selected disabled>Seleccione una opción</option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Encargado de despachos">Encargado de despachos</option>
+                        <option value="Gerente">Gerente</option>
+                        <option value="Encargado de bodega">Encargado de bodega</option>
+                        <option value="Supervisor de Marketing">Supervisor de Marketing</option>
+                        <option value="Encargado de Servicio al cliente">Encargado de Servicio al cliente</option>
+                    </select>
+                </div>
+                <!--Fecha de ingreso a la empresa-->
+                <div style="margin-top: 20px;" class="mb-3">
+                    <label for="txt_fecha_ingreso" class="form-label">Fecha de Ingreso</label>
+                    <input type="date" class="form-control" id="txt_fecha_ingreso"
+                        aria-describedby="txt_fecha_ingreso_help" required>
+                    <div id="txt_fecha_ingreso_help" class="form-text">
+                    </div>
+                </div>
+                <!--Lista de area de trabajo-->
+                <div style="margin-top: 20px;">
+                    <label for="lista-area-trabajo">Área de trabajo</label>
+                    <select id="lista-area-trabajo" class="form-select" aria-label="">
+                        <option selected disabled>Seleccione una opción</option>
+                        <option value="Ventas">Ventas</option>
+                        <option value="Despachos">Despachos</option>
+                        <option value="Gerencia">Gerencia</option>
+                        <option value="Bodega">Bodega</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Servicio al cliente">Servicio al cliente</option>
+                    </select>
+                </div>
+                <!--Departamento de trabajo-->
+                <div style="margin-top: 20px;">
+                    <label for="lista-departamentos-trabajo">Departamento de trabajo</label>
+                    <select id="lista-departamentos-trabajo" class="form-select" aria-label="">
+                        <option selected disabled>Seleccione un departamento</option>
+                        <option value="Ventas">Ventas</option>
+                        <option value="Logística">Logística</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Servicio al cliente">Servicio al cliente</option>
+                    </select>
+                </div>
+
+                <!--Botón de envío-->
+                <input style="margin-top: 20px;" type="button" class="btn btn-primary" onclick="crearDatosLaborales();"
+                    value="Enviar"></button>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
